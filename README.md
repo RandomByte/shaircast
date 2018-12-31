@@ -1,5 +1,12 @@
 shaircast
 ====================
+## What this fork is about
+- Replaces `config.json` with environment variable based configuration
+    - `SHAIRCAST_GROUP_NAME="All Speakers" SHAIRCAST_ENDPOINTS="192.168.1.116,192.168.1.117" npm start`
+- Adds package-lock.json
+- Adds Dockerfile
+
+## Original Introduction
 *So your iPhone can play music all around your house*
 
 AirPlay is cool if you want to stream music from your phone to one room in your house. But who has a house with one room? iTunes will let you stream to multiple speakers, but who wants to only listen to what they have in iTunes on their computer?

@@ -5,7 +5,13 @@ var path = require("path");
 var AirTunesServer = require("nodetunes");
 var airtunes = require("airtunes");
 
-var config = JSON.parse(fs.readFileSync("config.json"));
+const groupName = process.env.SHAIRCAST_GROUP_NAME;
+const endpointsString = process.env.SHAIRCAST_ENDPOINTS;
+
+var config = {
+	groupName,
+	endpoints: endpointsString.split(",")
+}
 var server = new AirTunesServer({ serverName : config.groupName });
 var endpoints = config.endpoints;
 var devices;
